@@ -25,9 +25,9 @@ endpoints of the JSONPlaceholder fake REST API.
 
 Detailed descriptions of each API request, including purpose, scenarios, and validations, can be found in:
 
-- `documentation.md`
+- `documentation-en.md` (English)
+- `documentation-pt-BR.md` (Brazilian Portuguese)
 
-This document outlines the test coverage, expected behaviors, and reasoning behind each test case.
 
 ---
 
@@ -67,7 +67,8 @@ newman run postman_collection.json
 ``` bash
   README.md
   LICENSE
-  documentation.md
+  documentation-en.md
+  documentation-pt-BR.md
   postman/
     collection.json
 ```
