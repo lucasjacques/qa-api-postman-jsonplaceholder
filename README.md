@@ -7,9 +7,10 @@ endpoints of the JSONPlaceholder fake REST API.
 
 ## 📌 Automated Scenarios
 
--   ✅ Retrieve posts (GET)
--   ✅ Retrieve single post by ID
--   ✅ Validate invalid requests (404 scenarios)
+-   ✅ Retrieve single post by ID (GET)
+-   ✅ Create a post, with full and minimal params (POST)
+-   ✅ Update an existing post (PUT)
+-   ✅ Validate invalid requests (404 and 500 scenarios)
 -   ✅ Response structure and data validation
 
 ---
@@ -28,13 +29,17 @@ Detailed descriptions of each API request, including purpose, scenarios, and val
 - `documentation-en.md` (English)
 - `documentation-pt-BR.md` (Brazilian Portuguese)
 
-
 ---
 
 ## 🚀 Setup
 
 1.  Clone this repository
-2.  Import the Postman collection into Postman
+2.  Install [Postman](https://www.postman.com/downloads/)
+3.  (Optional) Install Newman for CLI execution:
+
+    ``` bash
+    npm install -g newman
+    ```
 
 ---
 
@@ -50,14 +55,10 @@ Detailed descriptions of each API request, including purpose, scenarios, and val
 
 ### Newman (CLI)
 
-``` bash
-npm install -g newman
-```
-
 Run the collection:
 
 ``` bash
-newman run postman_collection.json
+newman run postman/collection.json
 ```
 
 ---
@@ -77,8 +78,7 @@ newman run postman_collection.json
 
 ## 🧠 Technical approach
 
--   Use of **collection variables** for reusability (`baseUrl`,
-    `postId`)
+-   Use of **collection variables** for reusability (`baseUrl`, `postId`)
 -   Validation of status codes and response bodies
 -   Separation of success and failure scenarios
 -   Clear and descriptive test names
@@ -93,18 +93,6 @@ The JSONPlaceholder API is a **fake API**, meaning:
 -   Responses are mocked for testing purposes
 
 Tests are designed considering these limitations.
-
----
-
-## 📦 Installation Summary
-
-``` bash
-# Install Newman (optional)
-npm install -g newman
-
-# Run collection
-newman run <collection-file>.json
-```
 
 ---
 
