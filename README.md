@@ -1,3 +1,10 @@
+<br />
+<p align="center">
+  <a href="https://github.com/lucasjacques/qa-api-postman-jsonplaceholder/">
+    <img src="images/logo.png" alt="Logo" width="160" height="160">
+  </a>
+</p>
+
 # Lucas Jacques' API Testing with Postman
 
 This project contains API automated tests using Postman to validate
